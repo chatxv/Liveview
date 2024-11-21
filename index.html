@@ -1,177 +1,131 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>URLy - Link Shortener</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Bio Link</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #333;
+      margin: 0;
+    }
+
+    /* Main Container */
+    .container {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+
+    /* Profile Section */
+    .profile {
+      margin-bottom: 20px;
+    }
+
+    .profile-pic {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .name {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .bio {
+      font-size: 14px;
+      color: #777;
+      margin-top: 5px;
+    }
+
+    /* Links */
+    .links {
+      margin-top: 20px;
+    }
+
+    .link {
+      display: block;
+      background-color: #007bff;
+      color: white;
+      padding: 10px;
+      margin-bottom: 10px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .link:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #888;
+    }
+
+    footer a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
 </head>
 <body>
-  <div class="container mt-5">
-    <h1>URLy - Link Shortener</h1>
-    <form id="shortenForm" class="mt-3">
-      <div class="input-group">
-        <input type="text" id="urlInput" class="form-control" placeholder="Enter your URL here" required>
-        <div class="input-group-append">
-          <button type="submit" class="btn btn-primary">Shorten URL</button>
-        </div>
-      </div>
-    </form>
-    <div id="shortenedURLContainer" class="mt-3" style="display: none;">
-      <h2>Shortened URL:</h2>
-      <div class="input-group">
-        <input type="text" id="shortenedURL" class="form-control" readonly>
-        <div class="input-group-append">
-          <button id="copyButton" class="btn btn-secondary">Copy</button>
-        </div>
-      </div>
+
+  <div class="container">
+    <div class="profile">
+      <img src="https://i.ibb.co.com/8zHTfLs/photo-1-2024-11-13-21-14-39.jpg" alt="Your Name" class="profile-pic">
+      <h1 class="name">Your Name</h1>
+      <p class="bio">Short bio or description about yourself.</p>
     </div>
-    <div class="mt-5">
-      <h2>Saved Shortened URLs:</h2>
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th>Shortened URL</th>
-            <th>Full URL</th>
-            <th>Date Time</th>
-            <th>Copy</th>
-          </tr>
-        </thead>
-        <tbody id="savedLinksBody">
-        </tbody>
-      </table>
+
+    <div class="links">
+      <a href="https://your-link1.com" target="_blank" class="link">Link 1</a>
+      <a href="https://your-link2.com" target="_blank" class="link">Link 2</a>
+      <a href="https://your-link3.com" target="_blank" class="link">Link 3</a>
+      <a href="https://your-link4.com" target="_blank" class="link">Link 4</a>
     </div>
+
+    <footer>
+      <p>Made with ❤️ by <a href="https://your-portfolio.com" target="_blank">Your Name</a></p>
+    </footer>
   </div>
 
-  <footer class="text-center mt-5">
-    <p>&copy; 2023 URLy - Link Shortener. All rights reserved. <a href="https://codexdindia.blogspot.com/tools" rel="dofollow" target="_blank">CXDIIN</a></p>
-  </footer>
-
-  <!-- Bootstrap JS and jQuery -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
   <script>
-    const API_KEY = '2259516283a549eea99744549057302f';
-    const API_URL = 'https://api.rebrandly.com/v1/links';
-
-       // Check if local storage is available in the browser
-    const isLocalStorageSupported = typeof Storage !== 'undefined';
-
-    // Function to display saved links from local storage
-    function displaySavedLinks() {
-      const savedLinks = JSON.parse(localStorage.getItem('shortenedLinks')) || [];
-      const savedLinksBody = document.getElementById('savedLinksBody');
-      savedLinksBody.innerHTML = '';
-
-      savedLinks.forEach((linkInfo) => {
-        if (true) {
-          const newRow = document.createElement('tr');
-
-          const shortUrlCell = document.createElement('td');
-          const fullUrlCell = document.createElement('td');
-          const dateTimeCell = document.createElement('td');
-          const copyCell = document.createElement('td');
-
-          const shortUrlNode = document.createTextNode(linkInfo.shortUrl);
-          const fullUrlNode = document.createTextNode(linkInfo.fullUrl);
-          const dateTimeNode = document.createTextNode(linkInfo.dateTime);
-
-          const copyButton = document.createElement('button');
-          copyButton.className = 'btn btn-secondary';
-          copyButton.textContent = 'Copy';
-          copyButton.addEventListener('click', () => {
-            copyToClipboard(linkInfo.shortUrl);
-          });
-          console.log(shortUrlNode);
-          shortUrlCell.appendChild(shortUrlNode);
-          fullUrlCell.appendChild(fullUrlNode);
-          dateTimeCell.appendChild(dateTimeNode);
-          copyCell.appendChild(copyButton);
-
-          newRow.appendChild(shortUrlCell);
-          newRow.appendChild(fullUrlCell);
-          newRow.appendChild(dateTimeCell);
-          newRow.appendChild(copyCell);
-
-          savedLinksBody.appendChild(newRow);
-        }
-      });
-    }
-
-    // Display saved links on page load
-    window.addEventListener('load', () => {
-      displaySavedLinks();
-    });
-
-
-    document.getElementById('shortenForm').addEventListener('submit', (event) => {
-      event.preventDefault();
-
-      const inputElement = document.getElementById('urlInput');
-      const urlToShorten = inputElement.value;
-
-      shortenURL(urlToShorten)
-        .then((shortenedURL) => {
-          const shortenedURLContainer = document.getElementById('shortenedURLContainer');
-          const shortenedURLElement = document.getElementById('shortenedURL');
-          const copyButton = document.getElementById('copyButton');
-
-          shortenedURLElement.value = shortenedURL.shortUrl;
-          shortenedURLContainer.style.display = 'block';
-
-          if (isLocalStorageSupported) {
-            // Save the shortened link info in local storage
-            const savedLinks = JSON.parse(localStorage.getItem('shortenedLinks')) || [];
-            savedLinks.push({
-              shortUrl: shortenedURL.shortUrl,
-              fullUrl: urlToShorten,
-              dateTime: new Date().toLocaleString(),
-            });
-            localStorage.setItem('shortenedLinks', JSON.stringify(savedLinks));
-
-            // Display updated saved links
-            displaySavedLinks();
-          }
-
-          // Enable the copy button
-          copyButton.disabled = false;
-        })
-        .catch((error) => {
-          console.error('Error shortening URL:', error);
-        });
-    });
-
-    function copyToClipboard(text) {
-      const tempElement = document.createElement('textarea');
-      tempElement.value = text;
-      document.body.appendChild(tempElement);
-      tempElement.select();
-      document.execCommand('copy');
-      document.body.removeChild(tempElement);
-      alert('Copied to clipboard!');
-    }
-
-    async function shortenURL(url) {
-      const response = await fetch(API_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'apikey': API_KEY,
-        },
-        body: JSON.stringify({
-          destination: url,
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to shorten URL');
+    // Scroll to top function
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 100) {
+        document.body.style.backgroundColor = "#e9ecef";
+      } else {
+        document.body.style.backgroundColor = "#f4f4f9";
       }
-
-      return response.json();
-    }
+    });
   </script>
+
 </body>
 </html>
