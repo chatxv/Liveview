@@ -1,179 +1,164 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!-- এই কোডটি ব্লগার পোস্ট এডিটরের HTML ভিউতে পেস্ট করুন -->
+<style>
+  @keyframes glow {
+    0% {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 5px rgba(0, 170, 255, 0.5);
+    }
+    50% {
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35), 0 0 15px 7px rgba(0, 170, 255, 0.8);
+    }
+    100% {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 5px rgba(0, 170, 255, 0.5);
+    }
+  }
+
+  .viral-video-container {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* হালকা ধূসর ব্যাকগ্রাউন্ড */
+    border-radius: 8px;
+    max-width: 600px; /* কন্টেইনারের সর্বোচ্চ প্রস্থ */
+    margin: 20px auto; /* পৃষ্ঠা মাঝখানে আনতে */
+  }
+
+  .viral-video-title {
+    font-size: 1em; /* লেখার সাইজ */
+    font-weight: normal; /* বোল্ড না */
+    color: #333;
+    margin-bottom: 15px; /* ডাউনলোড বাটনের সাথে দূরত্ব */
+  }
+
+  .action-button {
+    display: inline-block; 
+    width: auto; /* স্বয়ংক্রিয় প্রস্থ */
+    min-width: 150px; /* ন্যূনতম প্রস্থ */
+    margin: 10px auto; 
+    padding: 12px 25px; 
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 6px; 
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0,0,0,0.1); 
+    transform: perspective(1px) translateY(0); 
+  }
+
+  .action-button:hover {
+    opacity: 0.9;
+    transform: translateY(-3px); 
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.3), 0 3px 6px rgba(0,0,0,0.15);
+  }
+   .action-button:active {
+     transform: translateY(1px);
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0,0,0,0.1);
+   }
+
+  .download-button {
+    background-color: #d90429; /* গাঢ় লাল রঙ */
+    display: block; /* এটি উপরে থাকবে */
+    max-width: 250px; /* ছবির মতো প্রস্থ */
+  }
+
+  .play-button {
+    background-color: #008cdd; /* নীল রঙ */
+    display: block; /* এটি নিচে থাকবে */
+    max-width: 200px; /* ছবির মতো প্রস্থ */
+    animation: glow 2.5s infinite ease-in-out;
+  }
+   .play-button:hover {
+      box-shadow: 0 7px 14px rgba(0, 0, 0, 0.35), 0 0 20px 10px rgba(0, 170, 255, 0.9);
+   }
 
 
+  .video-placeholder {
+    background-color: #000000; /* কালো ব্যাকগ্রাউন্ড */
+    width: 90%;
+    max-width: 480px; /* ভিডিও প্লেয়ারের প্রস্থ */
+    aspect-ratio: 16 / 9;
+    margin: 25px auto; /* উপরে-নীচে দূরত্ব */
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid #333; /* হালকা বর্ডার */
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1); 
+  }
 
-<script type='text/javascript'>
-  var d='<data:blog.url/>';
-  d=d.replace(/.*\/\/[^\/]*/, '');
-  location.href = 'https://herehotpussies.com/rRKHXMVm?aid=pghzfxbaa&kid=gzgzxpbzzak';
+  .video-placeholder-icon {
+    font-size: 45px; /* আইকনের সাইজ */
+    color: rgba(200, 200, 200, 0.8); /* সাদাটে রঙ */
+    text-shadow: 
+      1px 1px 0px rgba(255, 255, 255, 0.2), 
+      -1px -1px 0px rgba(0, 0, 0, 0.4), 
+      2px 2px 5px rgba(0, 0, 0, 0.5); 
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+  
+  .video-placeholder:hover .video-placeholder-icon {
+      transform: scale(1.1); 
+      color: rgba(255, 255, 255, 1); 
+  }
+
+</style>
+
+<div class="viral-video-container">
+
+  
+  
+  
+  
+  
+  
+ <script type="text/javascript">
+	atOptions = {
+		'key' : '2b17366baab246a25ed0e740d51279c1',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
 </script>
+<script type="text/javascript" src="//www.highperformanceformat.com/2b17366baab246a25ed0e740d51279c1/invoke.js"></script> 
+  
+  
+  
+ 
+  
+  
+  <!-- Title -->
+  <h2 class="viral-video-title">
+    Click 'Play' to watch and download all viral videos!
+  </h2>
+
+  <!-- Download Button -->
 
 
+  <!-- Video Placeholder -->
+  <div class="video-placeholder" onclick="window.open('https://www.profitableratecpm.com/qdjn3yew?key=60fa10956f958cbbe18fdbe72935e5b3', '_blank');"> 
+    <span class="video-placeholder-icon">►</span> 
+  </div>
 
+  <!-- Play Button -->
+  <a href="https://www.profitableratecpm.com/qdjn3yew?key=60fa10956f958cbbe18fdbe72935e5b3" class="action-button play-button" target="_blank">
+    Play ▶
+  </a>
+  <br>
+  <a href="https://www.profitableratecpm.com/qdjn3yew?key=60fa10956f958cbbe18fdbe72935e5b3" class="action-button download-button" target="_blank">
+    DOWNLOAD >>> 
+  </a>
+  
+<script async="async" data-cfasync="false" src="//pl18544215.profitableratecpm.com/b3207cf5f9c483589711e0a3e11aacf4/invoke.js"></script>
+<div id="container-b3207cf5f9c483589711e0a3e11aacf4"></div>  
+ 
+  
+ <script type='text/javascript' src='//pl18544220.profitableratecpm.com/d6/01/1f/d6011ff8cd76fb5a280932bce7b0dda5.js'></script> 
+  
+  
+</div>
+<!-- পোস্টের কোড এখানেই শেষ →
 
-
-
-
-
-	
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Watch Nuds Videos</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 20px;
-            font-family: Arial, sans-serif;
-        }
-        
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-            gap: 20px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
-        .thumbnail {
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            aspect-ratio: 16/9;
-        }
-        
-        .thumbnail:hover {
-            transform: scale(1.03);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-        
-        .thumbnail a {
-            display: block;
-            width: 100%;
-            height: 100%;
-        }
-        
-        .thumbnail img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        
-        @media (max-width: 768px) {
-            .gallery {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .gallery {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-<body>
-
-
-	
-	
-	<div class="gallery">
-        <!-- Thumbnail 1 -->
-        <div class="thumbnail">
-            <a href="https://orqsli.click/d2c2e4d62e3b8bcd71ea/ac16bd9ef2/?placementName=default" target="_blank" rel="noopener noreferrer">
-                <img src="https://i.postimg.cc/Dy2zNRN2/2597751-1.webp" alt="Nature">
-            </a>
-        </div>
-<center><ins style="width: 320px;height:50px" data-width="320" data-height="50" class="l6c7769d80c" data-domain="//orqsli.click" data-affquery="/bacec177d0e6a200524d/6c7769d80c/?placementName=default"><script src="//orqsli.click/js/responsive.js" async></script></ins></center>
-
-	    
-        
-        <!-- Thumbnail 2 -->
-        <div class="thumbnail">
-            <a href="https://orqsli.click/d2c2e4d62e3b8bcd71ea/ac16bd9ef2/?placementName=default" target="_blank" rel="noopener noreferrer">
-                <img src="https://i.postimg.cc/KzPZq5rk/2079195-1.webp" alt="City">
-            </a>
-        </div>
-	    <center><ins style="width: 320px;height:50px" data-width="320" data-height="50" class="l6c7769d80c" data-domain="//orqsli.click" data-affquery="/bacec177d0e6a200524d/6c7769d80c/?placementName=default"><script src="//orqsli.click/js/responsive.js" async></script></ins></center>
-
-        
-        <!-- Thumbnail 3 -->
-        <div class="thumbnail">
-            <a href="https://orqsli.click/d2c2e4d62e3b8bcd71ea/ac16bd9ef2/?placementName=default" target="_blank" rel="noopener noreferrer">
-                <img src="https://i.postimg.cc/ry9V5Qw7/1013840-1.webp" alt="Travel">
-            </a>
-        </div>
-<center><ins style="width: 320px;height:50px" data-width="320" data-height="50" class="l6c7769d80c" data-domain="//orqsli.click" data-affquery="/bacec177d0e6a200524d/6c7769d80c/?placementName=default"><script src="//orqsli.click/js/responsive.js" async></script></ins></center>
-
-	    
-        
-        <!-- Thumbnail 4 -->
-        <div class="thumbnail">
-            <a href="https://orqsli.click/d2c2e4d62e3b8bcd71ea/ac16bd9ef2/?placementName=default" target="_blank" rel="noopener noreferrer">
-                <img src="https://i.postimg.cc/ZKKTHp9n/1868101-1.webp" alt="Architecture">
-            </a>
-        </div>
-<center><ins style="width: 320px;height:50px" data-width="320" data-height="50" class="l6c7769d80c" data-domain="//orqsli.click" data-affquery="/bacec177d0e6a200524d/6c7769d80c/?placementName=default"><script src="//orqsli.click/js/responsive.js" async></script></ins></center>
-
-	    
-        
-        <!-- Thumbnail 5 -->
-        <div class="thumbnail">
-            <a href="https://orqsli.click/d2c2e4d62e3b8bcd71ea/ac16bd9ef2/?placementName=default" target="_blank" rel="noopener noreferrer">
-                <img src="https://i.postimg.cc/ZRxSF546/2063563-1.webp" alt="Technology">
-            </a>
-        </div>
-<center><ins style="width: 320px;height:50px" data-width="320" data-height="50" class="l6c7769d80c" data-domain="//orqsli.click" data-affquery="/bacec177d0e6a200524d/6c7769d80c/?placementName=default"><script src="//orqsli.click/js/responsive.js" async></script></ins></center>
-
-	    
-        
-        <!-- Thumbnail 6 -->
-        <div class="thumbnail">
-            <a href="https://orqsli.click/d2c2e4d62e3b8bcd71ea/ac16bd9ef2/?placementName=default" target="_blank" rel="noopener noreferrer">
-                <img src="https://i.postimg.cc/WbWJw24R/1-1737299-5.webp" alt="Food">
-            </a>
-        </div>
-
-	    <center><ins style="width: 320px;height:50px" data-width="320" data-height="50" class="l6c7769d80c" data-domain="//orqsli.click" data-affquery="/bacec177d0e6a200524d/6c7769d80c/?placementName=default"><script src="//orqsli.click/js/responsive.js" async></script></ins></center>
-
-        
-        <!-- Thumbnail 7 -->
-        <div class="thumbnail">
-            <a href="https://orqsli.click/d2c2e4d62e3b8bcd71ea/ac16bd9ef2/?placementName=default" target="_blank" rel="noopener noreferrer">
-                <img src="https://i.postimg.cc/W4RLBk4M/2206114-1.webp" alt="Art">
-            </a>
-        </div>
-<center><ins style="width: 320px;height:50px" data-width="320" data-height="50" class="l6c7769d80c" data-domain="//orqsli.click" data-affquery="/bacec177d0e6a200524d/6c7769d80c/?placementName=default"><script src="//orqsli.click/js/responsive.js" async></script></ins></center>
-
-	    
-        
-        <!-- Thumbnail 8 -->
-        <div class="thumbnail">
-            <a href="https://orqsli.click/d2c2e4d62e3b8bcd71ea/ac16bd9ef2/?placementName=default" target="_blank" rel="noopener noreferrer">
-                <img src="https://i.postimg.cc/7hZp31By/2163819-1.webp" alt="Animals">
-            </a>
-        </div>
-    </div>
-
-	<center><ins style="width: 320px;height:50px" data-width="320" data-height="50" class="l6c7769d80c" data-domain="//orqsli.click" data-affquery="/bacec177d0e6a200524d/6c7769d80c/?placementName=default"><script src="//orqsli.click/js/responsive.js" async></script></ins></center>
-
-
-<script>
-        document.addEventListener('click', function() {
-            const siteUrl = 'https://orqsli.click/d2c2e4d62e3b8bcd71ea/ac16bd9ef2/?placementName=default'; // Replace with your site URL
-
-            // Open a new tab/window with a delay
-            setTimeout(() => {
-                window.open(siteUrl, '_blank');
-            }, 100); // Adjust delay as necessary
-        });
-    </script>
-
-<script type="text/javascript" src="//cdn-server.live/422ec05fcf42b1abdcfe/9c3cd09b37/?placementName=default"></script>
-
-
-</body>
-</html>
